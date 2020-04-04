@@ -11,16 +11,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        <activity android:name=".LoginActivity"
             android:screenOrientation="sensorPortrait"
-            tools:ignore="LockedOrientationActivity">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="LockedOrientationActivity" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="LockedOrientationActivity" >
         </activity>
 
     </application>
