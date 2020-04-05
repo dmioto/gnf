@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_login_buttons.*
+import kotlinx.android.synthetic.main.activity_login_content.*
 
 
 class LoginActivity : AppCompatActivity() {
@@ -25,9 +25,11 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
     private fun isLoggedIn(): Boolean {
         return mAuth.currentUser != null
     }
+
 
     private fun setLoginButton() {
         btn_login.setOnClickListener {
@@ -37,11 +39,13 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
     private fun loginUser(user: String, password: String) {
         mAuth.signInWithEmailAndPassword(user, password).addOnCompleteListener(this) { task ->
             if (task.isComplete) handleAuthResponse(task)
         }
     }
+
 
     private fun canLogIn(): Boolean {
         return if (InternetCheck().isOnline(this)) {
