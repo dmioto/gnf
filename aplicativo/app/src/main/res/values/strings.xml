@@ -2,7 +2,7 @@
     <string name="app_name">GNF</string>
 
     <!-- Login strings -->
-    <string name="username_hint">Nome do Usuário</string>
+    <string name="username_hint">Usuário</string>
     <string name="password_hint">Senha</string>
     <string name="btn_login">Entrar</string>
 
