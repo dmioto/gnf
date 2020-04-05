@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/gnf_background" >
 
     <ImageView
         android:id="@+id/imageView"
@@ -13,7 +14,6 @@
         android:layout_height="wrap_content"
         android:padding="40dp"
         android:src="@drawable/ic_gnf_key"
-        android:tint="@android:color/holo_blue_light"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,6 @@
         android:layout_width="125dp"
         android:layout_height="68dp"
         android:src="@drawable/ic_gnf"
-        android:tint="@android:color/holo_blue_light"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
