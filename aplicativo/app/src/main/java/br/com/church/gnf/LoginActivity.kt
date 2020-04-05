@@ -51,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
         return if (InternetCheck().isOnline(this)) {
             fieldAreValid(et_username) && fieldAreValid(et_password)
         } else {
-            et_username.error = "Sem conexao com a internet"
+            et_username.error = getString(R.string.no_connection_error)
             false
         }
 
@@ -63,7 +63,7 @@ class LoginActivity : AppCompatActivity() {
             return if (this != null && this.isNotEmpty()) {
                 true
             } else {
-                editText?.error = "Preencha esse campo"
+                editText?.error = getString(R.string.fill_this_field_error)
                 false
             }
         }
@@ -73,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
     private fun handleAuthResponse(task: Task<AuthResult>) {
         when {
             task.isSuccessful -> { openMainActivity() }
-            else -> { et_username.error = "username or password is invalid" }
+            else -> { et_username.error = getString(R.string.username_or_password_invalid_error) }
         }
     }
 
