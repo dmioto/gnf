@@ -73,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
     private fun handleAuthResponse(task: Task<AuthResult>) {
         when {
             task.isSuccessful -> { openMainActivity() }
-            else -> { et_username.error = getString(R.string.username_or_password_invalid_error) }
+            else -> { et_password.error = getString(R.string.username_or_password_invalid_error) }
         }
     }
 
